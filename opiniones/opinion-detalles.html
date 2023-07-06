@@ -1,0 +1,344 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>OPINIONES</title>
+    <link rel="stylesheet" href="css/simplebar.css">
+    <link rel="stylesheet" href="css/feather.css">
+    <link rel="stylesheet" href="css/dataTables.bootstrap4.css">
+    <link rel="stylesheet" href="css/daterangepicker.css">
+    <link rel="stylesheet" href="css/app-light.css" id="lightTheme">
+    <link rel="stylesheet" href="css/stars.css">
+                              
+<style>.checked{
+  color: orange;
+}
+#txtOpinion{
+  width: 100%;
+  border:1px solid #cccccc;
+}
+th{
+  background:#F2F6F9;
+  color: black;
+}  
+.badge{
+  padding: 7px;
+}
+input[type="radio"] {
+  display: none;
+}
+
+label {
+  color: grey;
+  font-size:20px;
+}
+
+.clasificacion {
+  direction: rtl;
+  unicode-bidi: bidi-override;
+}
+
+label:hover,
+label:hover ~ label {
+  color: orange;
+}
+
+input[type="radio"]:checked ~ label {
+  color: orange;
+}
+</style>    
+  </head>
+  <body class="vertical  light  ">
+    <div class="wrapper">
+      <nav class="topnav navbar navbar-light" style="background-color:#ffffff;">
+        <button type="button" class="navbar-toggler text-muted mt-2 p-0 mr-3 collapseSidebar">
+          <i class="fe fe-menu navbar-toggler-icon"></i>
+        </button>
+        <form class="form-inline mr-auto searchform text-muted">
+          <input class="form-control mr-sm-2 bg-transparent border-0 pl-4 text-muted" type="search" placeholder="Buscar" aria-label="Buscar">
+        </form>
+        <ul class="nav">
+          
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle text-muted pr-0" href="#" aria-expanded="false">
+              <span class="avatar avatar-sm mt-2">
+                <img src="./assets/avatars/face-1.jpg" alt="..." class="avatar-img rounded-circle"> 
+                  Jhon Jacob
+              </span>
+            </a>           
+          </li>
+        </ul>
+      </nav>
+      <aside class="sidebar-left border-right bg-white shadow" id="leftSidebar" data-simplebar>
+        <a href="#" class="btn collapseSidebar toggle-btn d-lg-none text-muted ml-2 mt-3" data-toggle="toggle">
+          <i class="fe fe-x"><span class="sr-only"></span></i>
+        </a>
+        <nav class="vertnav navbar navbar-light">         
+          <div class="w-100 mb-4 d-flex">
+            <a class="navbar-brand mx-auto mt-2 flex-fill text-center" href="./index.html">
+             <img src="assets/images/logo.png">
+            </a>
+          </div>
+          <ul class="navbar-nav flex-fill w-100 mb-2">           
+            <li class="nav-item w-100">
+              <a class="nav-link" href="index.html">
+                <i class="fe fe-home fe-16"></i>
+                <span class="ml-3 item-text">Inicio</span>
+              </a>
+            </li> 
+            <li class="nav-item w-100">
+              <a class="nav-link" href="#">
+                <i class="fe fe-box fe-16"></i>
+                <span class="ml-3 item-text">Pedidos</span>
+              </a>
+            </li> 
+            <li class="nav-item w-100">
+              <a class="nav-link" href="#">
+                <i class="fe fe-users fe-16"></i>
+                <span class="ml-3 item-text">Clientes</span>
+              </a>
+            </li> 
+            <li class="nav-item w-100">
+              <a class="nav-link" href="#">
+                <i class="fe fe-file-text fe-16"></i>
+                <span class="ml-3 item-text">Promociones</span>
+              </a>
+            </li> 
+            <li class="nav-item w-100">
+              <a class="nav-link" href="#">
+                <i class="fe fe-message-circle fe-16"></i>
+                <span class="ml-3 item-text">Opiniones</span>
+              </a>
+            </li> 
+            <li class="nav-item w-100">
+              <a class="nav-link" href="#">
+                <i class="fe fe-target fe-16"></i>
+                <span class="ml-3 item-text">Configuración</span>
+              </a>
+            </li>                        
+            
+          </ul>
+         
+        </nav>
+      </aside>
+      <main role="main" class="main-content">
+        <div class="container-fluid">
+          <div class="row justify-content-center">
+            <div class="col-12">
+              <div class="row">
+                <div class="col-md-7 my-4">
+                  <div class="card shadow">
+                    <div class="card-body">
+                       <h5>Información del Producto</h5> <hr> 
+                       <table width="100%">
+                        <tr>
+                          <td width="30%"><span id="FotoProducto"></span></td>
+                          <td valign="top"><h3 id="TituloProducto"></h3>
+                            <p>ID: 459769</p>
+                            <h3>645 $</h3>
+                            <center><h5>Dimensiones</h5></center>
+                            Altura: 17,5cm  &nbsp;&nbsp;&nbsp;  Largo: 10,7cm <br>
+                            Ancho: 0,7cm   &nbsp;&nbsp;&nbsp;&nbsp;   Peso: 300g.
+                          </td>
+                        </tr>
+                       </table>  
+                       <h4>Descripción</h4><hr>
+                       <p>Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.#
+                        Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.
+                        Lorem ipsum dolor sit amet.
+                       </p>
+                    </div>
+                  </div>
+                </div> 
+                <div class="col-md-5 my-4">
+                  <div class="card shadow">
+                    <div class="card-body">
+                    <h5>Opinión del cliente</h5><hr>
+                     
+                    <img src="./assets/avatars/face-1.jpg" width="50px" class="avatar-img rounded-circle"> 
+                    <span id="txtUsuario"></span> <hr>
+
+                    <h4>Opinion 
+                      <span class="clasificacion">
+                        <input id="radio1" type="radio" name="estrellas" value="5" onclick="Calificar($(this).val())">
+                        <label for="radio1">★</label>
+                        <input id="radio2" type="radio" name="estrellas" value="4" onclick="Calificar($(this).val())">
+                        <label for="radio2">★</label>
+                        <input id="radio3" type="radio" name="estrellas" value="3" onclick="Calificar($(this).val())">
+                        <label for="radio3">★</label>
+                        <input id="radio4" type="radio" name="estrellas" value="2" onclick="Calificar($(this).val())">
+                        <label for="radio4">★</label>
+                        <input id="radio5" type="radio" name="estrellas" value="1" onclick="Calificar($(this).val())">
+                        <label for="radio5">★</label>
+                      </span>
+                      <div id='msgbox'></div>
+                      <input type='hidden' id="tPuntos">
+
+                    </h4><hr>
+                    <textarea id="txtOpinion" id="" rows="10"></textarea>
+
+                    <center>
+                      <a class="badge badge-success" id="btnAprobar">APROBAR</a>
+                      <a class="badge badge-dark" id="btnEditar">EDITAR</a>
+                      <a class="badge badge-danger" id="btnEliminar">ELIMINAR</a>
+                      
+                    </center>
+
+                    </div>
+                  </div>
+                </div> 
+              </div> 
+            </div> 
+          </div> 
+        </div>
+        
+      </main> 
+    </div> 
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/moment.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/simplebar.min.js"></script>
+    <script src='js/daterangepicker.js'></script>
+    <script src='js/jquery.stickOnScroll.js'></script>
+    <script src="js/tinycolor-min.js"></script>
+    <script src='js/jquery.dataTables.min.js'></script>
+    <script src='js/dataTables.bootstrap4.min.js'></script>    
+    <script src='js/jquery.timepicker.js'></script>
+  </body>
+</html>
+<script>
+let idopinion = ''; 
+let num=0;
+  let CantRegs=0;
+  let SelUsuarioRegistrado = ""; 
+  let UPDUsuarioRegistrado = ""; 
+  let DELUsuarioRegistrado = ""; 
+
+$('.drgpicker').daterangepicker({
+  singleDatePicker: true,
+  timePicker: false,
+  showDropdowns: true,
+  locale:{
+    format: 'MM/DD/YYYY'
+  }
+});
+</script>
+<script>
+$(document).ready(function(){	     
+    var get = [];
+    location.search.replace('?', '').split('&').forEach(function (val) {
+        split = val.split("=", 2);
+        get[split[0]] = split[1];
+    });
+      idopinion = get['id'];
+      SelUsuarioRegistrado = "SELECT * FROM Opiniones WHERE op_id = '"+idopinion+"';"; 
+      DELUsuarioRegistrado = "DELETE FROM Opiniones WHERE op_id = '"+idopinion+"';"; 
+    initDatabase();
+    
+});
+
+  var creaTab = "CREATE TABLE IF NOT EXISTS Opiniones(op_id INTEGER PRIMARY KEY AUTOINCREMENT, producto TEXT, cliente TEXT, op_calificacion INT, op_opiniones TEXT, op_fecha DATE);"; 
+  var db = openDatabase("Sistemas", "1.0", "Sistemas", 200000); 
+  var dataset;
+  var DataType;
+   
+  function initDatabase(){
+      try {
+          if (!window.openDatabase){
+              $('#datos').html('Sin Acceso a la Base de Datos!!!');
+          }
+          else {
+              crearTablas();
+          }
+      }
+   
+      catch (e) {
+          if (e == 2) {
+           $('#result').html("Version error de la DB");
+          } else {
+              $('#result').html("Error " + e + ".");
+          }
+      return;
+      }
+  }
+  function crearTablas(){
+     db.transaction(function (tx) { tx.executeSql(creaTab, [], showRecords, onError); });
+  }
+   
+  function insertRecord(){
+     var txtNombres = $('#txtNombres').val();
+     var txtApellidos = $('#txtApellidos').val();
+     var txtEdad = $('#txtEdad').val();
+      
+      db.transaction(function (tx) { tx.executeSql(insertStatement, [txtNombres, txtApellidos, txtEdad], loadAndReset, onError); });
+  }
+   
+  function loadAndReset(){
+      showRecords();
+  }
+   
+  function onError(tx, error){
+    alert(error.message);
+  }
+   
+  function showRecords(){  
+      db.transaction(function (tx) {
+          tx.executeSql(SelUsuarioRegistrado, [], function (tx, result) {
+              dataset = result.rows; 
+              for (var i = 0, item = null; i < dataset.length; i++) {
+              item = dataset.item(i);
+                var tUsuario = item['cliente'];               
+                var tOpinion = item['op_opiniones'];   
+                var tCalif = item['op_calificacion'];  
+                var tProducto = item['producto']; 
+                var vFoto = item['producto'];                                            
+              } 	
+              $('#txtUsuario').html(tUsuario);
+              $('#txtOpinion').val(tOpinion);
+              if(tCalif==5) document.querySelector('#radio1').checked = true;              
+              if(tCalif==4) document.querySelector('#radio2').checked = true;              
+              if(tCalif==3) document.querySelector('#radio3').checked = true;              
+              if(tCalif==2) document.querySelector('#radio4').checked = true;              
+              if(tCalif==1) document.querySelector('#radio5').checked = true;              
+              //fotos
+              if(vFoto=='iPhone 13 Mini') imgProducto ="<img src='fotos/iphone1.jpg' width=300>";
+              if(vFoto=='iPhone 13 Pro Max') imgProducto ="<img src='fotos/iphone2.jpg' width=300>";
+              if(vFoto=='iPhone 14') imgProducto ="<img src='fotos/iphone3.png' width=300>";
+              $('#TituloProducto').html(tProducto);
+              $('#FotoProducto').html(imgProducto);
+              
+          });
+      });    
+  }	
+/**botones**/  
+function Calificar(puntos){
+  $('#msgbox').html('');
+  $('#tPuntos').val(puntos);
+}
+$('#btnAprobar').click(function(){
+     var txtOpinion = $('#txtOpinion').val();
+     var txtCalif = $('#tPuntos').val();
+     UPDUsuarioRegistrado ="UPDATE Opiniones SET op_opiniones = '"+txtOpinion+"',op_calificacion='"+txtCalif+"' WHERE op_id = '"+idopinion+"';";
+      db.transaction(function (tx) { tx.executeSql(UPDUsuarioRegistrado, [], showRecords, onError); });	
+	alert('Se aprobo la Opinion!!!');
+  //top.location="index.html";
+});
+$('#btnEditar').click(function(){
+     var txtOpinion = $('#txtOpinion').val();
+     var txtCalif = $('#tPuntos').val();
+     UPDUsuarioRegistrado ="UPDATE Opiniones SET op_opiniones = '"+txtOpinion+"',op_calificacion='"+txtCalif+"' WHERE op_id = '"+idopinion+"';";
+     db.transaction(function (tx) { tx.executeSql(UPDUsuarioRegistrado, [], showRecords, onError); });	
+	alert('Se editó la Opinion!!!');
+  //top.location="index.html";
+});
+$('#btnEliminar').click(function(){
+     var txtOpinion = $('#txtOpinion').val();
+     db.transaction(function (tx) { tx.executeSql(DELUsuarioRegistrado, [], showRecords, onError); });	
+	alert('Se ha Eliminado la Opinion!!!');
+//  top.location="index.html";
+});
+</script>
